@@ -1,0 +1,81 @@
+@use "variables" as *;
+
+.shop-layout {
+  display: flex;
+  gap: 40px;
+  margin-block: 40px;
+}
+
+.sidebar {
+  display: none;
+  width: 240px;
+  flex-shrink: 0;
+
+  li {
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+}
+
+.shop-list {
+  display: flex;
+  max-width: 1064px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.shop-card {
+  width: 348px;
+  max-height: 456px;
+  margin-bottom: 60px;
+  flex-shrink: 0;
+}
+
+.shop-img-wrapper {
+  background-color: $light-gray-bg;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 12px;
+
+  img {
+    width: 348px;
+    height: 348px;
+    object-fit: cover;
+  }
+}
+
+.promo-text {
+  color: #9e3500;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.shop-title {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.shop-category, .shop-colors {
+  color: $gray-text;
+  font-size: 15px;
+}
+
+.shop-price {
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+@media (min-width: 480px) {
+  .shop-list {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+}
